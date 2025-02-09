@@ -68,7 +68,7 @@ class MigrationsWalk(
         self.db_driver = manager.get_db_driver('sqlalchemy',
                                                backend='sqlalchemy')
         self.config = self.db_driver._find_alembic_conf()
-        self.init_versions = {'1333cef214d9', 'e74c32f034c5'}
+        self.init_versions = {'1333cef214d9', 'e74c32f034c5', '23c8ad2655a6'}
 
     def _migrate_up(self, revision, connection):
         check_method = getattr(self, f'_check_{revision}', None)
